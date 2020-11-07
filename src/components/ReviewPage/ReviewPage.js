@@ -1,7 +1,29 @@
+import axios from 'axios';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class ReviewPage extends Component {
+  state = {
+    feedback: {
+      feeling: this.props.store.feelingReducer.feeling,
+      understanding: this.props.store.understandingReducer.understanding,
+      support: this.props.store.supportReducer.support,
+      comments: this.props.store.commentReducer.comment,
+    },
+  };
+
+  submitFeedback = (event) => {
+    axios
+      .post('/feedback', this.state.feedback)
+      .then((response) => {
+        console.log('success');
+      })
+      .catch((err) => {
+        console.log(err);
+        alert('The submission of your feedback failed!');
+      });
+  };
+
   render() {
     return (
       <div>
@@ -12,7 +34,7 @@ class ReviewPage extends Component {
         </p>
         <p>Support: {this.props.store.supportReducer.support}</p>
         <p>Comments: {this.props.store.commentReducer.comment}</p>
-        <button>Submit</button>
+        <button onClick={this.submitFeedback}>Submit</button>
       </div>
     );
   }
