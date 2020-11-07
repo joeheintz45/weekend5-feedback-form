@@ -3,11 +3,12 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import './App.css';
+import FeelingPage from './FeelingPage/FeelingPage';
 
 class App extends Component {
-  componentDidMount() {
-    this.getForms();
-  }
+  // componentDidMount() {
+  //   this.getForms();
+  // }
 
   render() {
     return (
@@ -19,6 +20,9 @@ class App extends Component {
           </h4>
         </header>
         <br />
+        <Router>
+          <Route exact path="/feeling" component={FeelingPage} />
+        </Router>
       </div>
     );
   }
