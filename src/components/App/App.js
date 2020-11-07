@@ -9,6 +9,7 @@ import UnderstandingPage from '../UnderstandingPage/UnderstandingPage';
 import SupportPage from '../SupportPage/SupportPage';
 import CommentPage from '../CommentPage/CommentPage';
 import ReviewPage from '../ReviewPage/ReviewPage';
+import ResetPage from '../ResetPage/ResetPage';
 
 class App extends Component {
   // componentDidMount() {
@@ -32,6 +33,7 @@ class App extends Component {
           <Route exact path="/support" component={SupportPage} />
           <Route exact path="/comment" component={CommentPage} />
           <Route exact path="/review" component={ReviewPage} />
+          <Route exact path="/reset" component={ResetPage} />
         </Router>
       </div>
     );

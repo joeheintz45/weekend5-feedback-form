@@ -17,6 +17,7 @@ class ReviewPage extends Component {
       .post('/feedback', this.state.feedback)
       .then((response) => {
         console.log('success');
+        this.props.history.push('/reset');
       })
       .catch((err) => {
         console.log(err);
