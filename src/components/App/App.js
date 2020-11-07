@@ -5,6 +5,7 @@ import { HashRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import FeelingPage from './FeelingPage/FeelingPage';
 import HomePage from './HomePage/HomePage';
+import UnderstandingPage from './UnderstandingPage/UnderstandingPage';
 
 class App extends Component {
   // componentDidMount() {
@@ -24,6 +25,7 @@ class App extends Component {
         <Router>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/feeling" component={FeelingPage} />
+          <Route exact path="/understanding" component={UnderstandingPage} />
         </Router>
       </div>
     );
