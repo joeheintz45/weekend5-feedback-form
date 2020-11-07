@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import FeelingPage from './FeelingPage/FeelingPage';
-import HomePage from './FeelingPage/HomePage/HomePage';
+import HomePage from './HomePage/HomePage';
 
 class App extends Component {
   // componentDidMount() {
