@@ -6,6 +6,7 @@ import './App.css';
 import FeelingPage from './FeelingPage/FeelingPage';
 import HomePage from './HomePage/HomePage';
 import UnderstandingPage from './UnderstandingPage/UnderstandingPage';
+import SupportPage from '../SupportPage/SupportPage';
 
 class App extends Component {
   // componentDidMount() {
@@ -26,6 +27,7 @@ class App extends Component {
           <Route exact path="/" component={HomePage} />
           <Route exact path="/feeling" component={FeelingPage} />
           <Route exact path="/understanding" component={UnderstandingPage} />
+          <Route exact path="/support" component={SupportPage} />
         </Router>
       </div>
     );
