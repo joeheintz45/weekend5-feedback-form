@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import FeelingPage from './FeelingPage/FeelingPage';
+import HomePage from './FeelingPage/HomePage/HomePage';
 
 class App extends Component {
   // componentDidMount() {
@@ -21,6 +22,7 @@ class App extends Component {
         </header>
         <br />
         <Router>
+          <Route exact path="/" component={HomePage} />
           <Route exact path="/feeling" component={FeelingPage} />
         </Router>
       </div>
