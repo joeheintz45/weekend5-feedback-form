@@ -34,11 +34,21 @@ const supportReducer = (state = {}, action) => {
   }
 };
 
+const commentReducer = (state = {}, action) => {
+  if (action.type === 'COMMENT_ACTION') {
+    console.log(action.payload);
+    return action.payload;
+  } else {
+    return state;
+  }
+};
+
 const storeInstance = createStore(
   combineReducers({
     feelingReducer,
     understandingReducer,
     supportReducer,
+    commentReducer,
   })
 );
 

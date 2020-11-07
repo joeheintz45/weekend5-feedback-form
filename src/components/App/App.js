@@ -3,10 +3,11 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import './App.css';
-import FeelingPage from './FeelingPage/FeelingPage';
-import HomePage from './HomePage/HomePage';
-import UnderstandingPage from './UnderstandingPage/UnderstandingPage';
+import FeelingPage from '../FeelingPage/FeelingPage';
+import HomePage from '../HomePage/HomePage';
+import UnderstandingPage from '../UnderstandingPage/UnderstandingPage';
 import SupportPage from '../SupportPage/SupportPage';
+import CommentPage from '../CommentPage/CommentPage';
 
 class App extends Component {
   // componentDidMount() {
@@ -28,6 +29,7 @@ class App extends Component {
           <Route exact path="/feeling" component={FeelingPage} />
           <Route exact path="/understanding" component={UnderstandingPage} />
           <Route exact path="/support" component={SupportPage} />
+          <Route exact path="/comment" component={CommentPage} />
         </Router>
       </div>
     );

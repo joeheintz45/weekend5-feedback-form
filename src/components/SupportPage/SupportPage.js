@@ -8,7 +8,7 @@ class SupportPage extends Component {
 
   nextPageDispatch = (event) => {
     this.props.dispatch({ type: 'SUPPORT_ACTION', payload: this.state });
-    this.props.history.push('/comments');
+    this.props.history.push('/comment');
   };
 
   inputChange = (input) => (event) => {
