@@ -13,8 +13,15 @@ class UnderstandingPage extends Component {
   };
 
   nextPageDispatch = (event) => {
-    this.props.dispatch({ type: 'UNDERSTANDING_ACTION', payload: this.state });
-    this.props.history.push('/support');
+    if (this.state.understanding === '') {
+      alert('Please fill out the input field!');
+    } else {
+      this.props.dispatch({
+        type: 'UNDERSTANDING_ACTION',
+        payload: this.state,
+      });
+      this.props.history.push('/support');
+    }
   };
 
   render() {

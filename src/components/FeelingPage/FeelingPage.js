@@ -7,8 +7,12 @@ class FeelingPage extends Component {
   };
 
   nextPageDispatch = (event) => {
-    this.props.dispatch({ type: 'FEELING_ACTION', payload: this.state });
-    this.props.history.push('/understanding');
+    if (this.state.feeling === '') {
+      alert('Please fill out the input field!');
+    } else {
+      this.props.dispatch({ type: 'FEELING_ACTION', payload: this.state });
+      this.props.history.push('/understanding');
+    }
   };
 
   inputChange = (input) => (event) => {
