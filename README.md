@@ -23,6 +23,7 @@ I had to build a multi view feedback form that stored the feedback to a database
 - Redux
 - Node.js
 - PostgreSQL
+- Material-UI
 
 ## Acknowledgement
 
