@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import './FeelingPage.css';
 
 // component for the feeling view
 class FeelingPage extends Component {
@@ -30,11 +32,16 @@ class FeelingPage extends Component {
     return (
       <div>
         <h2>How are you feeling?</h2>
-        <input
-          onChange={this.inputChange('feeling')}
-          placeholder="Feeling?"
-          type="number"
-        />
+        <div className="feeling">
+          <TextField
+            id="outlined-basic"
+            label="Feeling?"
+            variant="outlined"
+            margin="dense"
+            onChange={this.inputChange('feeling')}
+            type="number"
+          />
+        </div>
         <Button
           variant="contained"
           color="primary"

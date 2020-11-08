@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import './UnderstandingPage.css';
 
 // component for the understanding page
 class UnderstandingPage extends Component {
@@ -33,11 +35,15 @@ class UnderstandingPage extends Component {
     return (
       <div>
         <h2>How well do you understand this week?</h2>
-        <input
-          onChange={this.inputChange('understanding')}
-          placeholder="Understanding?"
-          type="number"
-        />
+        <div className="understanding">
+          <TextField
+            id="outlined-basic"
+            variant="outlined"
+            label="Understanding?"
+            onChange={this.inputChange('understanding')}
+            type="number"
+          />
+        </div>
         <Button
           variant="contained"
           color="primary"

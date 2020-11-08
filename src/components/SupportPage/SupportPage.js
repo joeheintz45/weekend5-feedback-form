@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import './SupportPage.css';
 
 // component for the support page
 class SupportPage extends Component {
@@ -30,11 +32,15 @@ class SupportPage extends Component {
     return (
       <div>
         <h2>How supported are you feeling?</h2>
-        <input
-          onChange={this.inputChange('support')}
-          placeholder="Support?"
-          type="number"
-        />
+        <div className="support">
+          <TextField
+            id="outlined-basic"
+            variant="outlined"
+            label="Support?"
+            onChange={this.inputChange('support')}
+            type="number"
+          />
+        </div>
         <Button
           variant="contained"
           color="primary"

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import './CommentPage.css';
 
 // component that displays the comments input page
 class CommentPage extends Component {
@@ -25,11 +27,15 @@ class CommentPage extends Component {
     return (
       <div>
         <h2>Do you have any comments for us?</h2>
-        <input
-          onChange={this.inputChange('comment')}
-          placeholder="Comments?"
-          type="text"
-        />
+        <div className="comment">
+          <TextField
+            id="outlined-basic"
+            variant="outlined"
+            label="Comments?"
+            onChange={this.inputChange('comment')}
+            type="text"
+          />
+        </div>
         <Button
           variant="contained"
           color="primary"
