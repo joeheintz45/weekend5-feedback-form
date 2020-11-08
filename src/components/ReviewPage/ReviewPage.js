@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Button from '@material-ui/core/Button';
 
 // component for the feedback review page
 class ReviewPage extends Component {
@@ -40,7 +41,13 @@ class ReviewPage extends Component {
         </p>
         <p>Support: {this.props.store.supportReducer.support}</p>
         <p>Comments: {this.props.store.commentReducer.comment}</p>
-        <button onClick={this.submitFeedback}>Submit</button>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={this.submitFeedback}
+        >
+          Submit
+        </Button>
       </div>
     );
   }

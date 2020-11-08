@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
 
 // component for the reset view
 class ResetPage extends Component {
@@ -11,7 +12,9 @@ class ResetPage extends Component {
     return (
       <div>
         <h2>Thank You for your Feedback!</h2>
-        <button onClick={this.resetPage}>Leave New Feedback</button>
+        <Button variant="contained" color="primary" onClick={this.resetPage}>
+          Leave New Feedback
+        </Button>
       </div>
     );
   }

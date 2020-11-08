@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Button from '@material-ui/core/Button';
 
 // component for the understanding page
 class UnderstandingPage extends Component {
@@ -37,7 +38,13 @@ class UnderstandingPage extends Component {
           placeholder="Understanding?"
           type="number"
         />
-        <button onClick={this.nextPageDispatch}>Next</button>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={this.nextPageDispatch}
+        >
+          Next
+        </Button>
       </div>
     );
   }

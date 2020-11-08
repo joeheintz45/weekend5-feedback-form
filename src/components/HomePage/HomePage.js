@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
 
 // component for the home page view
 class HomePage extends Component {
@@ -11,7 +12,9 @@ class HomePage extends Component {
     return (
       <div>
         <h2>Let's Get started</h2>
-        <button onClick={this.nextPage}>Start</button>
+        <Button variant="contained" color="primary" onClick={this.nextPage}>
+          Start
+        </Button>
       </div>
     );
   }

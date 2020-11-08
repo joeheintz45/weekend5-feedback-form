@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Button from '@material-ui/core/Button';
 
 // component that displays the comments input page
 class CommentPage extends Component {
@@ -29,7 +30,13 @@ class CommentPage extends Component {
           placeholder="Comments?"
           type="text"
         />
-        <button onClick={this.nextPageDispatch}>Next</button>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={this.nextPageDispatch}
+        >
+          Next
+        </Button>
       </div>
     );
   }

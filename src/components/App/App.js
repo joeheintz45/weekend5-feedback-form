@@ -9,6 +9,7 @@ import CommentPage from '../CommentPage/CommentPage';
 import ReviewPage from '../ReviewPage/ReviewPage';
 import ResetPage from '../ResetPage/ResetPage';
 
+// main app component for the react page
 class App extends Component {
   render() {
     return (
