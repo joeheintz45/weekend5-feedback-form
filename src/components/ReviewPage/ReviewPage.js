@@ -2,7 +2,9 @@ import axios from 'axios';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+// component for the feedback review page
 class ReviewPage extends Component {
+  // sets the default state to the states of the reducers on index.js
   state = {
     feedback: {
       feeling: this.props.store.feelingReducer.feeling,
@@ -12,15 +14,18 @@ class ReviewPage extends Component {
     },
   };
 
+  // posts the feed data to the server to be stored in the database on click
   submitFeedback = (event) => {
     axios
       .post('/feedback', this.state.feedback)
       .then((response) => {
         console.log('success');
+        // switches to the /reset view upon successful POST
         this.props.history.push('/reset');
       })
       .catch((err) => {
         console.log(err);
+        // alerts the user of failed POST and halts POST to server
         alert('The submission of your feedback failed!');
       });
   };
@@ -41,6 +46,7 @@ class ReviewPage extends Component {
   }
 }
 
+// sets the Redux store so that this component has access to that data
 const mapStoreToProps = (store) => ({
   store,
 });

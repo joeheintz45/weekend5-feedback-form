@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+// component for the support page
 class SupportPage extends Component {
   state = {
     support: '',
   };
 
+  // dispatches state to the related reducer and switches to the /comment view on click
   nextPageDispatch = (event) => {
+    // checks for empty input field and alerts user if left empty\
     if (this.state.support === '') {
       alert('Please fill out the input field!');
     } else {
@@ -15,6 +18,7 @@ class SupportPage extends Component {
     }
   };
 
+  // targets the input field and sets state to that value
   inputChange = (input) => (event) => {
     this.setState({
       [input]: event.target.value,

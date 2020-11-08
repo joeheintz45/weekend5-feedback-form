@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+// component for the feeling view
 class FeelingPage extends Component {
   state = {
     feeling: '',
   };
 
+  // dispatches the state to the related reducer and switches to the /understanding view on click
   nextPageDispatch = (event) => {
+    // checks if the input field is empty and alerts user if not filled
     if (this.state.feeling === '') {
       alert('Please fill out the input field!');
     } else {
@@ -15,6 +18,7 @@ class FeelingPage extends Component {
     }
   };
 
+  // targets the input field and sets state to that value
   inputChange = (input) => (event) => {
     this.setState({
       [input]: event.target.value,

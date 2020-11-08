@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
+// component for the reset view
 class ResetPage extends Component {
+  // switches to the / view on click
   resetPage = (event) => {
     this.props.history.push('/');
   };

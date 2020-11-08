@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+// component for the understanding page
 class UnderstandingPage extends Component {
   state = {
     understanding: '',
   };
 
+  // targets the input field and sets state to that input value
   inputChange = (input) => (event) => {
     this.setState({
       [input]: event.target.value,
     });
   };
 
+  // dispatches the state to the related reducer and switches to the /support view on click
   nextPageDispatch = (event) => {
+    // checks if the input field is empty and if empty alerts the user to fill the field
     if (this.state.understanding === '') {
       alert('Please fill out the input field!');
     } else {

@@ -9,6 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('build'));
 
 /** ---------- EXPRESS ROUTES ---------- **/
+// sets the get and post routes to the /feedback route
 const feedbackRouter = require('./routes/feedbackRouter');
 app.use('/feedback', feedbackRouter);
 
